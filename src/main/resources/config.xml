@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration >
+    <context id="context1" >
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.1.124:3306/doctor?useUnicode=true&amp;characterEncoding=UTF-8"
+                        userId="root"
+                        password="1qa2ws3ed" />
+        <!-- 实体类 -->
+        <javaModelGenerator targetPackage="com.lion.pojo" targetProject="mybatis_reverse_engineering\src\main\java" />
+        <!-- SQL语句 -->
+        <sqlMapGenerator targetPackage="com.lion.mapper" targetProject="mybatis_reverse_engineering\src\main\java" />
+        <!-- dao接口 -->
+        <javaClientGenerator targetPackage="com.lion.dao" targetProject="mybatis_reverse_engineering\src\main\java" type="XMLMAPPER" />
+        <table
+                tableName="complications_report"
+                domainObjectName="ComplicationsReport"
+                enableCountByExample="true"
+                enableDeleteByExample="true"
+                enableSelectByExample="true"
+                enableUpdateByExample="true"
+        >
+        </table>
+    </context>
+</generatorConfiguration>
