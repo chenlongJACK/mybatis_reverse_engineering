@@ -19,7 +19,7 @@ public class FullyAutomatic {
     public static void main(String[] args) throws Exception{
         List<String> warnings=new ArrayList<String>();
         boolean overwrite=true;
-        File configFile=new File("D:\\develop\\IdeaProjects\\springboot\\mybatis_reverse_engineering\\src\\main\\resources\\config.xml");
+        File configFile=new File("D:\\develop\\IdeaProject\\springboot_demo\\mybatis_reverse_engineering\\src\\main\\resources\\config.xml");
         ConfigurationParser cp=new ConfigurationParser(warnings);
         Configuration config=cp.parseConfiguration(configFile);
         DefaultShellCallback callback=new DefaultShellCallback(overwrite);
